@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Chapter 1: Why Python and Statistics? &#8212; Beginning Python for Data Analysis</title>
+    <title>Chapter 6: Libraries and Files &#8212; Beginning Python for Data Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Chapter 2: Variables and Operators" href="chapter2.html" />
-    <link rel="prev" title="Introduction?" href="intro_new.html" />
+    <link rel="next" title="Chapter 7: Statistical Tests" href="chapter7.html" />
+    <link rel="prev" title="Chapter 5: Flow Control and Conditional Statements" href="chapter5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,8 +114,8 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter1.html">
    Chapter 1: Why Python and Statistics?
   </a>
  </li>
@@ -139,8 +139,8 @@ const thebe_selector_output = ".output, .cell_output"
    Chapter 5: Flow Control and Conditional Statements
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="chapter6.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Chapter 6: Libraries and Files
   </a>
  </li>
@@ -213,7 +213,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter1.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter6.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -273,7 +273,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter1.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter6.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -301,7 +301,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/chapter1.ipynb"
+        <a href="_sources/chapter6.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -338,90 +338,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-statistics">
-   Why Statistics?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-python">
-   Why Python?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-anaconda">
-   Why Anaconda?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hello-world">
-   Hello World
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Chapter 1: Why Python and Statistics?</h1>
+                <h1>Chapter 6: Libraries and Files</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-statistics">
-   Why Statistics?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-python">
-   Why Python?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#why-anaconda">
-   Why Anaconda?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hello-world">
-   Hello World
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -429,45 +362,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="chapter-1-why-python-and-statistics">
-<h1>Chapter 1: Why Python and Statistics?<a class="headerlink" href="#chapter-1-why-python-and-statistics" title="Permalink to this headline">#</a></h1>
-<p>If you’re like most students studying psychology, then you are surely excited that you finally get to study <strong>statistics</strong> and <strong>computer programming</strong> in a single course! If your irony detector was on, then the first sentence of this paragraph makes complete sense. If you don’t know what <a class="reference external" href="https://youtu.be/Jne9t8sHpUc">irony</a> is, <a class="reference external" href="https://www.merriam-webster.com/dictionary/irony">look it up</a> and then re-read.</p>
-<p>Of course, hopefully you already know that psychological science depends on statistics for making sense of data, and know a bit about how statistics work. Hopefully you also know that Python is a general purpose computer language that can be usful for data analysis and other things - the kinds of things that psychologists sometimes have to do. Hopefully you’re also interested in studying, and perhaps contributing to, psychological science.</p>
-<section id="why-statistics">
-<h2>Why Statistics?<a class="headerlink" href="#why-statistics" title="Permalink to this headline">#</a></h2>
-<p>Like so many other terms, the term <em>statistics</em> means different things in different contexts. Here, statistics refers to methods for making sense of data. Sometimes <em>statistics</em> will be used to refer to numbers that were produced using the methods for making sense of data. So, statistics (numbers) are produced using statistics (methods for analyzing data). In San Francisco, statistics (methods for analyzing data) is referred to as <em>data science</em>. I’m sure someone somewhere has better definitions than these, but these will work for now.</p>
-<p>To address the question that this section is supposed to address, we need to study statistics because numbers don’t speak for themselves. Quite the contrary, there are few things in life less satisfying than looking at a document full of numbers (and nothing else) and trying to figure out what the numbers mean. If numbers “spoke for themselves”, we could just look at spreadsheets and “listen”, which of course does not work. At the very least, we need to know what the numbers refer to - are these measurments of some quantity, such as weight or time? Or are the numbers being used as labels, kind of like a number on a jersey? Of course, the data might not be numeric at all, but might be letters. Knowing what the “numbers” represent is hardly ever sufficient though. Knowing that 1 = dog and 2 = cat doesn’t really do much to help make sense of a list of numbers like 1,2,2,2,1,1,2,2… especially when there are a lot of numbers to examine.</p>
-<p>There are of course many other questions one could ask (Are there patterns on the data? Are there subgroups? Is there anything “actionable”?, etc.), and these questions are in fact what makes data analysis interesting.  For now then, the main point is that asking and answering questions about data requires statistical procedures. Numbers do not speak for themselves. Rather, statistics provides a set of tools we can use to (try and) find out what the numbers might say if they could speak.</p>
-<p>So why do psychology students study statistics? Quite simply because statistics are necessary in order for psychologists to understand data.</p>
-</section>
-<section id="why-python">
-<h2>Why Python?<a class="headerlink" href="#why-python" title="Permalink to this headline">#</a></h2>
-<p>Of course we need a way to do calculations on a computer since hand calculations are way too cumbersome. There are many options for the would-be psychology student who needs to do a bit of statistics too. A lot of them don’t even require learning (much) computer programing. For example, Microsoft Excel is a spreadsheet application that is widely available and has many useful statistical functions. There are free-to-use alternatives too, like Google Sheets. There are several commercially available software packages dedicated to statistics (SPSS, Stata, Minitab), and free alternatives (Jamovi, JASP), that also can be used without having to learn to program a computer.</p>
-<p>The problem with such what-you-see-is-what-you-get (WYSIWYG) applications is that it can make reproducability unecessarily difficult. One of the cornerstones of science is that researchers should be able to reproduce each others’ results. With a WYSIWYG applications, reproducing an analysis could mean following the same click path and making sure the same options are selected for the variuous options one has to check while going through the click path. There’s nothing wrong with that, except that it’s much easier to share code that has all of the important information about the analysis procedure in the code itself. Of course, one has to learn at least one computer language to benefit from writing scripts.</p>
-<p>There multiple languages that can be used for statistics. Technically, any computer language that can do basic arithmetic can be used for statistics, but some languages make it easier than others. In fact SAS and R were both designed for statistics, and are both widely used by psychologists. R is even free, and has an easy to use integrated development environment called R-studio. The main limitation with R is that it’s use is almost completely restricted to data analysis (this is of course, not strictly true). What if, like me, you occasionally need to use a computer to write programs to present stimuli and collect data? Well, Python works well for presenting stimuli and collecting data <strong>and</strong> is also pretty good for data analysis (including numerical summaries, hypothesis testing, machine learning, visualization, etc.). It’s also <a class="reference external" href="https://docs.python.org/3/index.html">well documented</a>.</p>
-</section>
-<section id="why-anaconda">
-<h2>Why Anaconda?<a class="headerlink" href="#why-anaconda" title="Permalink to this headline">#</a></h2>
-<p>To keep things simple, everything in these tutorials will be written with the Anaconda Python Distribution in mind. Why? Because it makes things easier! If you haven’t already, please go to <a class="reference external" href="https://www.anaconda.com/">Anaconda’s Website</a>, download the installer for your operating system, and install Anaconda! After you’re done that, open Anaconda Navigator and come back here.</p>
-</section>
-<section id="hello-world">
-<h2>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this headline">#</a></h2>
-<p>Let’s get started with some code. After you’ve opened Anaconda Navigator, you should see a “home” screen with a bunch of applications. The two we’ll be using most are Jupyter Notebook and Spyder - so go ahead and open Jupyter Notebook. It will open in a Browser (like Firefox). From the “New” menu near the top right of the page, select Python 3 Notebook (.ipykernel). Copy the code below and paste it into your notebook. With the cell selected, press “Run” and watch the magic!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World
-</pre></div>
-</div>
-</div>
-</div>
-<p>Congratulations! You’ve written (i.e. plagiarized) your first computer program in Python. Note that the rest of this book assumes you did the hard work of installing Anaconda on your computer! Part of working with open-source tools is reading through documentation and instructions, and web forums. So, if you haven’t installed Anaconda and run the Hello World code, please do that before proceeding. Here’s the link again in case you need it: <a class="reference external" href="https://www.anaconda.com/">Anaconda’s Website</a>.</p>
-<p>The next chapter is about setting up and manipulating variables.</p>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-6-libraries-and-files">
+<h1>Chapter 6: Libraries and Files<a class="headerlink" href="#chapter-6-libraries-and-files" title="Permalink to this headline">#</a></h1>
+<p>Topics:
+-useful libraries like numpy, scipy, stats-models, matplotlib - make note: I’m still at point of following “cookbook” approach for most libraries, but that works because of the way the libraries are documented. Huge number of libraries available through Anaconda. Go over finding and installing them if they need to be installed (will need to insert pictures into these notebooks)</p>
+<p>-Working with csv and text files (built in Python I/O functions and using Pandas). Note that this is something to become familiar with, since sometimes you won’t have control over the format of the files you get, or what you need to provide in some cases! Be sure to include the “magic code” for making sure that the working directory is where it should be…</p>
+<p>examples:
+-open text files, extract word counts to Dictionary, then Dict to DataFrame, save as formatted csv.
+-Combine lots of separate files into one big file</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -497,17 +399,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro_new.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="chapter5.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction?</p>
+            <p class="prev-next-title">Chapter 5: Flow Control and Conditional Statements</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="chapter2.html" title="next page">
+    <a class='right-next' id="next-link" href="chapter7.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapter 2: Variables and Operators</p>
+        <p class="prev-next-title">Chapter 7: Statistical Tests</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

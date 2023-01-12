@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 4: User-defined Functions and Built-in Modules &#8212; Beginning Python for Data Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 5: Flow Control and Conditional Statements" href="chapter5.html" />
+    <link rel="prev" title="Chapter 3: Lists, Dicts, and Loops" href="chapter3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Beginning Python for Data Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro_new.html">
+                    Introduction?
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter1.html">
+   Chapter 1: Why Python and Statistics?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter2.html">
+   Chapter 2: Variables and Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter3.html">
+   Chapter 3: Lists, Dicts, and Loops
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapter 4: User-defined Functions and Built-in Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter5.html">
+   Chapter 5: Flow Control and Conditional Statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter6.html">
+   Chapter 6: Libraries and Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter7.html">
+   Chapter 7: Statistical Tests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter8.html">
+   Chapter 8: Data Visualization
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter4.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter4.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/chapter4.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-defined-function-for-the-mean">
+   User-defined Function for The Mean
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#built-in-modules">
+   Built-In Modules
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chapter 4: User-defined Functions and Built-in Modules</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#user-defined-function-for-the-mean">
+   User-defined Function for The Mean
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#built-in-modules">
+   Built-In Modules
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-4-user-defined-functions-and-built-in-modules">
+<h1>Chapter 4: User-defined Functions and Built-in Modules<a class="headerlink" href="#chapter-4-user-defined-functions-and-built-in-modules" title="Permalink to this headline">#</a></h1>
+<p>A function is a block of reusable code. If you’ve been following along, you may recall seeing things like print(“stuff”) in the code blocks. These are built in functions. Python has lots of useful built in functions - you can check them out <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>.</p>
+<p>It’s also very easy to create your own functions in Python. Here, we’ll create a function to calculate a mean. Various Python libraries (covered in this and later chapters) have other, perhaps better methods for calculating a mean, so this function itself may not be useful beyhond a simple exercise for learning about user-defined functions in Python (which is good, because functions are indespensible).</p>
+<p>Sometimes it’s easier to write your own functions than to search for the module or library that has whatever functionality you want (sometimes). But Python has some built in modules for things like ranomization, math, and statistics. Accessing them requires importing the modules, which we haven’t discussed yet, but we’ll go over some of the things that can these modules can do.</p>
+<section id="user-defined-function-for-the-mean">
+<h2>User-defined Function for The Mean<a class="headerlink" href="#user-defined-function-for-the-mean" title="Permalink to this headline">#</a></h2>
+<p>I’m betting you know what a <em>mean</em> is: it’s also commonly called an <em>average</em>. The mean is nice because it is a single number that captures the location of a set of numbers, and the mean can be precisely defined.</p>
+<p>If you have a variable x with a total of n observations, finding the mean involves first adding up all of the values of x, and then dividing the result of the summation by the number of things that were summed. That’s quite a mouthful to say, but the equation expresses the idea much more succinctly.</p>
+<div class="math notranslate nohighlight">
+\[
+  \mu = \frac{\Sigma_{i}x_i}{n}
+\]</div>
+<p>The greek letter mu (“myoo”, <span class="math notranslate nohighlight">\(\mu\)</span>) stands for “mean”, the big sigma <span class="math notranslate nohighlight">\(\Sigma\)</span> with the little i next to it means “add everything up that’s a little i and matches what’s to the right”, the <span class="math notranslate nohighlight">\(x\)</span> with the i indicates that the <span class="math notranslate nohighlight">\(x\)</span>’s are the things indexed with little i’s that need to be added up. Again, that’s a lot of words for something that can be so succinctly expressed using an equation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“It is better to appreciate math than to live in fear of it?” - Abe Lincoln (probably)</p>
+</div>
+<p>We need a few things: to add up all of the x’s, to count the total number of x’s, and to divide the sum by the total number.</p>
+<p>First, a function for adding up all the numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#When naming functions, it&#39;s important to avoid using reserved terms in Python</span>
+<span class="c1">#https://www.w3schools.com/python/python_ref_keywords.asp</span>
+
+<span class="c1">#def tells Python this will be a function</span>
+<span class="c1">#Note the use of indentation: it&#39;s important in Python</span>
+<span class="c1"># AddItUp is the name I gave the function (x) will be the name of the sequence passed to the function</span>
+<span class="k">def</span> <span class="nf">AddItUp</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#creates local variable that will only be usable inside this function</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span><span class="c1">#for loop that will add the value of each x</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">total</span><span class="c1">#functions need to return something, in this case we want to sum!</span>
+
+<span class="c1">#Create new variable, store in it the results of the new function.</span>
+<span class="c1">#The list [1,2,3] will become the &quot;x&quot;</span>
+<span class="n">Summation</span> <span class="o">=</span> <span class="n">AddItUp</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">,</span><span class="mf">3.</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Summation</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>We could also write a new function to count the number of items in a sequence, but Python has a built in function for that. So, we can just use that and write a new function to calculate our mean!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#A function to compute the mean, which relies one one user-defined and one built-in function</span>
+<span class="k">def</span> <span class="nf">MyMean</span> <span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">SigmaX</span> <span class="o">=</span> <span class="n">AddItUp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="c1">#using AddItUp, the user-defined function that returns the sum of a sequence</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="c1">#using len, the built in function that returns the length of a sequence</span>
+    <span class="n">TheMean</span> <span class="o">=</span> <span class="n">SigmaX</span><span class="o">/</span><span class="n">n</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">TheMean</span><span class="p">)</span>
+
+<span class="n">MyFakeData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">,</span><span class="mf">3.</span><span class="p">]</span> <span class="c1">#List </span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MyMean</span><span class="p">(</span><span class="n">MyFakeData</span><span class="p">))</span> <span class="c1">#print what the function returns, which will be the mean of the fake data</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>If anyone wants to accuse me now of wasting time go ahead. But remember that part of the goal with this book is for you to learn Python, which requires doing exercises in Python! So, in asking you to follow along to write a function that doesn’t need to be written, I’m really just giving you practice. So now, try to write a function that calculates a sample standard deviation. Do it without peaking ahead to the next section!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SqrtOfFour</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span> <span class="mf">.5</span> <span class="c1">#Hint for the challenge!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">SqrtOfFour</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="built-in-modules">
+<h2>Built-In Modules<a class="headerlink" href="#built-in-modules" title="Permalink to this headline">#</a></h2>
+<p>Hopefully you successfully wrote a function for calculating a sample standard deviation. Now that you’ve done it the hard way, I’ll tell you about adding functions to Python by importing built-in modules (installing and importing libraries will be covered later). That means you’ll never have to write a function to calculate the standard deviation again (or for the first time).</p>
+<p>Python has numerous built in modules, or libraries, that are helpful for analyzing data. There are many other kinds of built in modules, but we’ll focus on the ones for numeric and mathematical computation - and even then, just a subset of the modules. The <a class="reference external" href="https://docs.python.org/3/library/numeric.html">documentation</a> is good, and there are plenty of pretty good tutorials like <a class="reference external" href="https://www.w3schools.com/python/module_statistics.asp">this one</a>. So, as usual, what’s presented here isn’t exhaustive, but more illusrative. I’ll import the statistics module, and calculate the mean and sample standard deviation of some fake data. The general syntax for importing other built-in modules and working with their functions is the same. To import, include <strong>import <em>ModuleName</em></strong> at the top of the script, and to use a function from the library save the results of <em>ModuleName</em>.<em>FunctionName()</em> to a variable, and then do whatever you want with the variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span>
+
+<span class="n">MyFakeData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">,</span><span class="mf">3.</span><span class="p">]</span>
+
+<span class="n">EasyMean</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">MyFakeData</span><span class="p">)</span>
+<span class="n">EasyStDev</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">MyFakeData</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EasyMean:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">EasyMean</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EasyStDev:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">EasyStDev</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EasyMean:2.0
+EasyStDev:1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s do some exercises, that perhaps require you to answer questions I haven’t answered in this chapter?</p>
+<p>1 What does Python have available - in base Python! - to add up a list of numbers?</p>
+<p>give some broken code with import math and import random, maybe filtering out bad data? - dog example,</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="chapter3.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Chapter 3: Lists, Dicts, and Loops</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="chapter5.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 5: Flow Control and Conditional Statements</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Donald Alexander Varakin, Ph.D.<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
