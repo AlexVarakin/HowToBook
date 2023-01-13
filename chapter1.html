@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Chapter 2: Variables and Operators" href="chapter2.html" />
-    <link rel="prev" title="Introduction?" href="intro_new.html" />
+    <link rel="prev" title="Introduction" href="intro_new.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro_new.html">
-                    Introduction?
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -376,8 +376,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hello-world">
-   Hello World
+  <a class="reference internal nav-link" href="#excercise-hello-world">
+   Excercise: Hello World
   </a>
  </li>
 </ul>
@@ -415,8 +415,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hello-world">
-   Hello World
+  <a class="reference internal nav-link" href="#excercise-hello-world">
+   Excercise: Hello World
   </a>
  </li>
 </ul>
@@ -432,27 +432,27 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-1-why-python-and-statistics">
 <h1>Chapter 1: Why Python and Statistics?<a class="headerlink" href="#chapter-1-why-python-and-statistics" title="Permalink to this headline">#</a></h1>
 <p>If you’re like most students studying psychology, then you are surely excited that you finally get to study <strong>statistics</strong> and <strong>computer programming</strong> in a single course! If your irony detector was on, then the first sentence of this paragraph makes complete sense. If you don’t know what <a class="reference external" href="https://youtu.be/Jne9t8sHpUc">irony</a> is, <a class="reference external" href="https://www.merriam-webster.com/dictionary/irony">look it up</a> and then re-read.</p>
-<p>Of course, hopefully you already know that psychological science depends on statistics for making sense of data, and know a bit about how statistics work. Hopefully you also know that Python is a general purpose computer language that can be usful for data analysis and other things - the kinds of things that psychologists sometimes have to do. Hopefully you’re also interested in studying, and perhaps contributing to, psychological science.</p>
+<p>Of course, if you’re reading this then I’m assuming you’re a psychology student, since that is who I’m writing this book for. I assume that you’re sincerely interested in psychological science, and possibly contributing to it. Hopefully you already know that psychological science depends on statistics for making sense of data, and know a bit about how statistics work. Hopefully you also know that Python is a general purpose computer language that can be usful for data analysis and other things - the kinds of things that psychologists sometimes have to do. The purpose of this book is to help psychology students, who may have limited technical backgrounds, get started with programming in Python, with an eye towards understanding the language and how it works, but also providing some practical “recipes” that can be copied and pasted and used with minimal changes to the code.</p>
 <section id="why-statistics">
 <h2>Why Statistics?<a class="headerlink" href="#why-statistics" title="Permalink to this headline">#</a></h2>
 <p>Like so many other terms, the term <em>statistics</em> means different things in different contexts. Here, statistics refers to methods for making sense of data. Sometimes <em>statistics</em> will be used to refer to numbers that were produced using the methods for making sense of data. So, statistics (numbers) are produced using statistics (methods for analyzing data). In San Francisco, statistics (methods for analyzing data) is referred to as <em>data science</em>. I’m sure someone somewhere has better definitions than these, but these will work for now.</p>
 <p>To address the question that this section is supposed to address, we need to study statistics because numbers don’t speak for themselves. Quite the contrary, there are few things in life less satisfying than looking at a document full of numbers (and nothing else) and trying to figure out what the numbers mean. If numbers “spoke for themselves”, we could just look at spreadsheets and “listen”, which of course does not work. At the very least, we need to know what the numbers refer to - are these measurments of some quantity, such as weight or time? Or are the numbers being used as labels, kind of like a number on a jersey? Of course, the data might not be numeric at all, but might be letters. Knowing what the “numbers” represent is hardly ever sufficient though. Knowing that 1 = dog and 2 = cat doesn’t really do much to help make sense of a list of numbers like 1,2,2,2,1,1,2,2… especially when there are a lot of numbers to examine.</p>
 <p>There are of course many other questions one could ask (Are there patterns on the data? Are there subgroups? Is there anything “actionable”?, etc.), and these questions are in fact what makes data analysis interesting.  For now then, the main point is that asking and answering questions about data requires statistical procedures. Numbers do not speak for themselves. Rather, statistics provides a set of tools we can use to (try and) find out what the numbers might say if they could speak.</p>
-<p>So why do psychology students study statistics? Quite simply because statistics are necessary in order for psychologists to understand data.</p>
+<p>So why do psychology students study statistics? Quite simply because statistics are necessary in order for psychologists to understand data. Given the aims of this book, coverage of statistics will be limited - but statistical concepts will be explained, and implemented using Python 3.</p>
 </section>
 <section id="why-python">
 <h2>Why Python?<a class="headerlink" href="#why-python" title="Permalink to this headline">#</a></h2>
-<p>Of course we need a way to do calculations on a computer since hand calculations are way too cumbersome. There are many options for the would-be psychology student who needs to do a bit of statistics too. A lot of them don’t even require learning (much) computer programing. For example, Microsoft Excel is a spreadsheet application that is widely available and has many useful statistical functions. There are free-to-use alternatives too, like Google Sheets. There are several commercially available software packages dedicated to statistics (SPSS, Stata, Minitab), and free alternatives (Jamovi, JASP), that also can be used without having to learn to program a computer.</p>
-<p>The problem with such what-you-see-is-what-you-get (WYSIWYG) applications is that it can make reproducability unecessarily difficult. One of the cornerstones of science is that researchers should be able to reproduce each others’ results. With a WYSIWYG applications, reproducing an analysis could mean following the same click path and making sure the same options are selected for the variuous options one has to check while going through the click path. There’s nothing wrong with that, except that it’s much easier to share code that has all of the important information about the analysis procedure in the code itself. Of course, one has to learn at least one computer language to benefit from writing scripts.</p>
+<p>Of course we need a way to do calculations on a computer since hand calculations are way too cumbersome. There are many options for the would-be psychology student who needs to do a bit of statistics too. A lot of them don’t even require learning (much) computer programing - users can simply point and click their way to the output. The problem with such what-you-see-is-what-you-get (WYSIWYG) applications is that it can make reproducability unecessarily difficult. One of the cornerstones of science is that researchers should be able to reproduce each others’ results: given the same data, researchers should at the very least be able to compute the same numbers following the same procedure. With a WYSIWYG applications, reproducing an analysis could mean following the same click path and making sure the same options are selected for the variuous options one has to check while going through the click path. There’s nothing wrong with that, except that it’s much easier to share code that has all of the important information about the analysis procedure in the code itself. Of course, one has to learn at least one computer language to benefit from writing scripts.</p>
 <p>There multiple languages that can be used for statistics. Technically, any computer language that can do basic arithmetic can be used for statistics, but some languages make it easier than others. In fact SAS and R were both designed for statistics, and are both widely used by psychologists. R is even free, and has an easy to use integrated development environment called R-studio. The main limitation with R is that it’s use is almost completely restricted to data analysis (this is of course, not strictly true). What if, like me, you occasionally need to use a computer to write programs to present stimuli and collect data? Well, Python works well for presenting stimuli and collecting data <strong>and</strong> is also pretty good for data analysis (including numerical summaries, hypothesis testing, machine learning, visualization, etc.). It’s also <a class="reference external" href="https://docs.python.org/3/index.html">well documented</a>.</p>
+<p>While the goal of this book is for students to have a solid understanding of Python, the book will not be an exhaustive account of how Python works. The text will of course explain some of the most important aspects of Python, but a lot will remain unacknowledged. Rather, by following the examples and fixing examples of inentionally broken code, students should develop a solid <a class="reference external" href="https://www.psychologytoday.com/us/basics/memory/procedural-memory">procedural memory</a> for Python, even if their <a class="reference external" href="https://www.psychologytoday.com/us/basics/memory/semantic-memory">semantic memory</a> is full of holes.</p>
 </section>
 <section id="why-anaconda">
 <h2>Why Anaconda?<a class="headerlink" href="#why-anaconda" title="Permalink to this headline">#</a></h2>
 <p>To keep things simple, everything in these tutorials will be written with the Anaconda Python Distribution in mind. Why? Because it makes things easier! If you haven’t already, please go to <a class="reference external" href="https://www.anaconda.com/">Anaconda’s Website</a>, download the installer for your operating system, and install Anaconda! After you’re done that, open Anaconda Navigator and come back here.</p>
 </section>
-<section id="hello-world">
-<h2>Hello World<a class="headerlink" href="#hello-world" title="Permalink to this headline">#</a></h2>
-<p>Let’s get started with some code. After you’ve opened Anaconda Navigator, you should see a “home” screen with a bunch of applications. The two we’ll be using most are Jupyter Notebook and Spyder - so go ahead and open Jupyter Notebook. It will open in a Browser (like Firefox). From the “New” menu near the top right of the page, select Python 3 Notebook (.ipykernel). Copy the code below and paste it into your notebook. With the cell selected, press “Run” and watch the magic!</p>
+<section id="excercise-hello-world">
+<h2>Excercise: Hello World<a class="headerlink" href="#excercise-hello-world" title="Permalink to this headline">#</a></h2>
+<p>Let’s get started with some code. You should have Anaconda installed at this point! Open Anaconda Navigator, and after some waiting (it can take a while) you should see a “home” screen with a bunch of applications. The two we’ll be using most are Jupyter Notebook and Spyder - so go ahead and open Jupyter Notebook. It will open in a Browser (like Firefox). From the “New” menu near the top right of the page, select Python 3 Notebook (.ipykernel). Copy the code below and paste it into your notebook. With the cell selected, press “Run” and watch the magic!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
@@ -465,7 +465,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Congratulations! You’ve written (i.e. plagiarized) your first computer program in Python. Note that the rest of this book assumes you did the hard work of installing Anaconda on your computer! Part of working with open-source tools is reading through documentation and instructions, and web forums. So, if you haven’t installed Anaconda and run the Hello World code, please do that before proceeding. Here’s the link again in case you need it: <a class="reference external" href="https://www.anaconda.com/">Anaconda’s Website</a>.</p>
+<p>Congratulations! You’ve written (i.e. plagiarized) your first computer program in Python. Note that the rest of this book assumes you did the hard work of installing Anaconda on your computer! Part of working with open-source tools is reading through documentation and instructions, and web forums. So, if you haven’t installed Anaconda and run the Hello World code, please do that before proceeding. Here’s the link again in case you need it: <a class="reference external" href="https://www.anaconda.com/">Anaconda’s Website</a>. If there is something basic, like how to open a file in Jupyter Notebook, you may want to try figuring it our on your own before asking how to do it. Why? Because it’s absolutely impossible for me to anticipate all of the things that could possibly cause a problem. It’s fine to ask questions, but be prepared to explain what you’ve tried already to solve the problem.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“You’re smart. You’ll figure it out” - Daniel T. Levin (my graduate school advisor)</p>
+</div>
 <p>The next chapter is about setting up and manipulating variables.</p>
 </section>
 </section>
@@ -501,7 +505,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction?</p>
+            <p class="prev-next-title">Introduction</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="chapter2.html" title="next page">

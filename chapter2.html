@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro_new.html">
-                    Introduction?
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -127,6 +127,31 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="chapter3.html">
    Chapter 3: Lists, Dicts, and Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter4.html">
+   Chapter 4: User-defined Functions and Built-in Modules
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter5.html">
+   Chapter 5: Flow Control and Conditional Statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter6.html">
+   Chapter 6: Libraries and Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter7.html">
+   Chapter 7: Statistical Tests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter8.html">
+   Chapter 8: Data Visualization
   </a>
  </li>
 </ul>
@@ -374,6 +399,33 @@ title="Print to PDF"
    Comparison operators
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-1">
+     Exercise 2.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-2">
+     Exercise 2.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-3">
+     Exercise 2.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-4">
+     Exercise 2.4
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -432,6 +484,33 @@ title="Print to PDF"
    Comparison operators
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-1">
+     Exercise 2.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-2">
+     Exercise 2.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-3">
+     Exercise 2.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-4">
+     Exercise 2.4
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -444,8 +523,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-2-variables-and-operators">
 <h1>Chapter 2: Variables and Operators<a class="headerlink" href="#chapter-2-variables-and-operators" title="Permalink to this headline">#</a></h1>
-<p>You should already have Anaconda Installed. Great. Now open a Jupyter Notebook, as we did at the end of chapter 1. In this chapter I’ll show you some basic Python, and you can run it using your own Jupyter Notebook. Not everything here is intended to be practical for you in the future. Some of it will be, but mostly the purpose of this chapter is to familiarize yourself with Python 3.</p>
-<p>It’s necessary to discuss coding practices a bit. When writing code, it’s useful to leave comments so that you and others can follow it! Comments are for human readers, and not code for the computer to execute. Below, are some comments and some actual code. If you hover your mouse over the right side of the box below, a <em>copy</em> button should appear; click it and copy the code, then paste it into your open Jupyter Notebook. (If you need to open a new cell, click the + icon near the top of the page, and make sure the cell is “code” (not “markdown”, or “Raw NBConvert”, or “Heading”).</p>
+<p>If you followed along in Chapter 1, you have Anaconda installed already. Now open a Jupyter Notebook, as we did at the end of chapter 1. In this chapter I’ll show you some basic Python, and you can run it using your own Jupyter Notebook. Not everything in this chapter is intended to be practical for you in the future. Some of it will be, but mostly the purpose of this chapter is to familiarize yourself with Python 3.</p>
+<p>It’s necessary to discuss coding practices a bit. When writing code, it’s useful to leave comments so that you and others can follow it! Comments are for human readers, so the rules are much more flexible than code for the computer to execute. Below, are some comments and some actual code. If you hover your mouse over the right side of the box below, a <em>copy</em> button should appear; click it and copy the code, then paste it into your open Jupyter Notebook. (If you need to open a new cell, click the + icon near the top of the page, and make sure the cell is “code” (not “markdown”, or “Raw NBConvert”, or “Heading”).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#anything after the hashtag is a comment, not code.</span>
@@ -463,13 +542,13 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>This code doesn’t do anything interesting. Notice the print statement at the end. This is necessary so we know that our “program” actually did something. In other Python development environments, the output of print statements may appear in different places, but print statements are still useful for developing and debugging. To make useful print statements, it’s necessary to understand how variables work in Python 3.</p>
+<p>This code doesn’t do anything interesting. Notice the print statement at the end of the code block. This is necessary so we know that our “program” actually did something. In other Python development environments, the output of print statements may appear in different places, but print statements are still useful for developing and debugging. In Jupyter Notebooks, print statements output simply appears below the block of code.</p>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
-<p><em>Variables</em> are things that can vary. There are different kinds of variables (and different systems for categorizing variables!).</p>
+<p>In psychology and statistics, <em>variables</em> are things that can vary. In Python, variables store values in computer memory. Although these definitions are technically different, it won’t hurt us for current intents and purposes to simply go with the definition of <em>variable</em> from psychology, since that definition works with Python too, even if it’s not quite technically precise. The value for a particular variable in Python can be one of many different types too. It’s way beyhond the scope of this book to get into all of the different ways numbers can be represented on a computer, so I’ll stick with the types that I use most often for analyzing data.</p>
 <section id="assigning-values">
 <h3>Assigning Values<a class="headerlink" href="#assigning-values" title="Permalink to this headline">#</a></h3>
-<p>In Python, variables are assigned values using the equal sign (“=”). Here are a few different kinds of variables.</p>
+<p>In Python, variables are assigned values using the equal sign (“=”). Here are a few different kinds of variables. You can copy and paste the code below into your own notebook if you like.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MyInt</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#an integer</span>
@@ -541,15 +620,16 @@ True
 </div>
 </div>
 <p>That’s just an example. Since we will be focusing on data analysis, we’ll focus on some basic mathematical operations here.  <a class="reference external" href="https://www.tutorialspoint.com/python/python_operators.htm">Here</a> is a link to a more comprehensive list of operators in Python.</p>
+<p>You might be asking yourself: why are there seperate integers and floating point numbers? Why not just represent all numbers as numbers? That’s actually a good question, and there is a good answer that requires getting into how computers encode numbers and many other things that honestly, I don’t know that much about. There are situations in which using an int instead of a float can cause problems, and vice versa. In analyzing data for psychology research, it’s usually OK to just use floating point numbers instead of ints though. This issue is one that you should be aware of, especially if you encounter a situation where the distinction is important - which could happen if you get enough experience analyzing data.</p>
 </section>
 <section id="updating-and-changing-values">
 <h3>Updating and changing values<a class="headerlink" href="#updating-and-changing-values" title="Permalink to this headline">#</a></h3>
-<p>Python executes lines of code in order, top to bottom. (Though, with some programming styles, it doesn’t always seem that way).</p>
+<p>When a variable is declared in Python, a place in memory is reserved for the value, but the value itself is often changeable, or <em>mutable</em>. In fact, it’s common to update or otherwise change the value of a variable as a script executes. Python executes lines of code in order, top to bottom. (Though, with some programming styles, it doesn’t always seem that way). So what happens as we assign and then change values of variables? Read the code below, and the output, to see (you can copy and paste into your own notebook if you want as well).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">x2</span> <span class="o">=</span> <span class="n">x1</span>
-<span class="n">x1</span> <span class="o">+=</span> <span class="n">x1</span> <span class="c1">#you can use plus-equal to add a variable to itself. Works with -= and *= too.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1">#assigns x1 to the float 1.0</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">x1</span> <span class="c1">#assins x2 to be equal to x1</span>
+<span class="n">x1</span> <span class="o">+=</span> <span class="n">x1</span> <span class="c1">#this line updates x1 by adding x1 to itself. plus-equal += adds a variable to itself. Works with -= and *= too.</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="c1">#Can you figure out why these print statements have the output they do?</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
 </pre></div>
@@ -567,7 +647,7 @@ True
 </section>
 <section id="basic-arithmetic-operators">
 <h2>Basic Arithmetic Operators<a class="headerlink" href="#basic-arithmetic-operators" title="Permalink to this headline">#</a></h2>
-<p>The section above snuck in some novel arithmetic operators. In this secion, let’s look at a few more standard ones. The code block below is larger, but you can copy it and run it in your own notebook. It shows addition, subtraction, multiplication, exponentiation, and division for floating point numbers and integers.</p>
+<p>The section above snuck in some novel arithmetic operators. In this secion, let’s look at a few more standard ones. The code block below is larger, but you can copy it and run it in your own notebook. It shows addition, subtraction, multiplication, exponentiation, and division for floating point numbers and integers. This block of code is longer than others so far, so it may take you a little longer to examine the relationship between the input and the output. If you’re not familiar with Python, take the time to study how different sections of code are related to each other, and to the outout.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#the assignment operator is =, set up two floats and two ints</span>
@@ -638,7 +718,10 @@ Division results:
 </div>
 </div>
 </div>
-<p>With Python 3, the float/int distinction isn’t as important as it used to be, but note that sometimes the difference has implcations for computation. Notice (with the division results) that with Python 3, integers are converted to floating point numbers when the result of integer division results in a floating point. Floating point numbers are usually safe, at least for most of what psychologists need.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“With Python 3, the float/int distinction isn’t as important as it used to be, but note that sometimes the difference has implcations for computation. Floating point numbers are usually safe, at least for most of what psychologists need.” - Napolean (what he would say if he was teaching a Python course for psychology students)</p>
+</div>
 <section id="modulo-a-cool-operator-you-may-not-be-familiar-with">
 <h3>Modulo: A cool operator you may not be familiar with<a class="headerlink" href="#modulo-a-cool-operator-you-may-not-be-familiar-with" title="Permalink to this headline">#</a></h3>
 <p>Finally, a few more useful basic operators: the modulo operator (%). This will return the remainder of a division, so 5%4 will return 1, 6%4 returns two, 7%4 returns 3, and 8%4 returns 0. . This is actually very useful for making sure that things are checked cyclically, e.g. that a computer monitor updates every 10 frames.</p>
@@ -660,7 +743,7 @@ Division results:
 </section>
 <section id="comparison-operators">
 <h2>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">#</a></h2>
-<p>Sometimes you need to compare two values. Comparison operators do this, and return a boolean. Note also that the booleans had to be converted to strings in order for the print statments to work, so the comparison operators themselves are presented in a way that doesn’t match how they are used. Typically, comparison operators are useful for controling the flow of a program using if/else, while, and other statements in Python.</p>
+<p>Sometimes you need to compare two values. Comparison operators do this, and return a boolean (true/false). Note also that the booleans had to be converted to strings in order for the print statments to work, so the comparison operators themselves are presented in a way that doesn’t match how they are used. Typically, comparison operators are useful for controling the flow of a program using if/else, while, and elif statements in Python, all of which we’ll cover in a later chapter. Here, the focus is on comparing two values, here referred to as x and y.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
@@ -694,7 +777,93 @@ x &lt;= y: True
 </div>
 </div>
 </div>
-<p>Variables are incredibly important, and it will be worth your time to become familiar with variable types and how each works in Python. What has been presented here is a start, hopefully enough so you can follow the intructions at websites like Tutorials Point or the official Python documentation.</p>
+<p>Variables are incredibly important, and it will be worth your time to become familiar with variable types and how each works in Python. What has been presented here is a start, hopefully enough so you can follow the intructions at websites like <a class="reference external" href="https://www.tutorialspoint.com/python3/index.htm">Tutorialspoint</a> or the official <a class="reference external" href="https://www.python.org/doc/">Python documentation</a>.</p>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<p>The following exercises contain broken code. The comments will tell you what the output should be. Copy and run the code in your own Jupyter Notebook. Change it until it works! For these excercises, each cell is intended to “stand on it’s own”, so don’t worry about saving code from Exercise 2.1 for Excercise 2.2.</p>
+<section id="exercise-2-1">
+<h3>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The following code should print the results of adding two numbers, 3 and 4. The result should be 7, not 34.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;3&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;4&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-2-2">
+<h3>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This code should print &quot;The value of z is equal to 7&quot;</span>
+<span class="c1">#Change the code so that it will print out the product of x and y no matter what their values are.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of z is equal to&quot;</span> <span class="o">+</span> <span class="s2">&quot;z&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The value of z is equal toz
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-2-3">
+<h3>Exercise 2.3<a class="headerlink" href="#exercise-2-3" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Help Ms. Frizzle figure out how many children she lost when the Magic School Bus crashed.</span>
+<span class="c1">#She knows how many children she had on the bus at first. </span>
+<span class="c1">#She does not know how many body bags were returned, but she knows each bag was full, with the exact number of bodies it could hold, no more no less.</span>
+<span class="c1">#Each bag could only hold 6 bodies.</span>
+<span class="c1">#Are there any missing children? The bags can&#39;t be opened.</span>
+<span class="c1">#Replace exactly one character in the code below to find out if Ms. Frizzle should consider looking for missing kids...</span>
+
+<span class="n">NumberAtStart</span> <span class="o">=</span> <span class="mi">80</span> <span class="c1">#There were 80 children on the Magic School Bus. Now they are missing</span>
+<span class="n">FullBagsReturned</span> <span class="o">=</span> <span class="nb">int</span><span class="p">()</span> <span class="c1">#unknown!!!</span>
+<span class="n">NumberBodyPerBag</span> <span class="o">=</span> <span class="mi">6</span> <span class="c1">#Each bodybag holds 6 bodies. and each bag was at capacity, no more no less.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">NumberAtStart</span><span class="o">/</span><span class="n">NumberBodyPerBag</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.333333333333334
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-2-4">
+<h3>Exercise 2.4<a class="headerlink" href="#exercise-2-4" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The code below doesn&#39;t work! Fix it so the error goes away.</span>
+
+<span class="n">myVariable</span> <span class="o">=</span> <span class="s2">&quot;Good&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MyVariable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
