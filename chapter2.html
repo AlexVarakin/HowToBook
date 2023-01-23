@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro_new.html">
-                    Introduction
+                    Preface
                 </a>
             </li>
         </ul>
@@ -366,8 +366,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#assigning-values">
-     Assigning Values
+    <a class="reference internal nav-link" href="#assigning-values-for-different-data-types">
+     Assigning Values For Different Data Types
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -451,8 +451,8 @@ title="Print to PDF"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#assigning-values">
-     Assigning Values
+    <a class="reference internal nav-link" href="#assigning-values-for-different-data-types">
+     Assigning Values For Different Data Types
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -542,13 +542,13 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>This code doesn’t do anything interesting. Notice the print statement at the end of the code block. This is necessary so we know that our “program” actually did something. In other Python development environments, the output of print statements may appear in different places, but print statements are still useful for developing and debugging. In Jupyter Notebooks, print statements output simply appears below the block of code.</p>
+<p>This code doesn’t do anything interesting, but it’s worth studying. Notice the print statement at the end of the code block. This is necessary so we know that our “program” actually did something. In other Python development environments, the output of print statements may appear in different places, but print statements are still useful for developing and debugging. In Jupyter Notebooks, print statements output simply appears below the block of code. We’ll see plenty of print statements in the future, and when you start your own projects, you’ll certainly use them too.</p>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h2>
-<p>In psychology and statistics, <em>variables</em> are things that can vary. In Python, variables store values in computer memory. Although these definitions are technically different, it won’t hurt us for current intents and purposes to simply go with the definition of <em>variable</em> from psychology, since that definition works with Python too, even if it’s not quite technically precise. The value for a particular variable in Python can be one of many different types too. It’s way beyhond the scope of this book to get into all of the different ways numbers can be represented on a computer, so I’ll stick with the types that I use most often for analyzing data.</p>
-<section id="assigning-values">
-<h3>Assigning Values<a class="headerlink" href="#assigning-values" title="Permalink to this headline">#</a></h3>
-<p>In Python, variables are assigned values using the equal sign (“=”). Here are a few different kinds of variables. You can copy and paste the code below into your own notebook if you like.</p>
+<p>In psychology and statistics, <em>variables</em> are things that can vary. In Python, variables store values in computer memory. Although these definitions are technically different, it won’t hurt us for current intents and purposes to simply go with the definition of <em>variable</em> from psychology, since that definition works with Python too, even if it’s not quite technically precise. The value for a particular variable in Python can be one of many different types too. It’s way beyhond the scope of this book to get into all of the different ways numbers can be represented on a computer, so I’ll stick with the types that I use most often for analyzing data. Of course, it’s helpful to have some variables set up first, which is very easy to do in Python.</p>
+<section id="assigning-values-for-different-data-types">
+<h3>Assigning Values For Different Data Types<a class="headerlink" href="#assigning-values-for-different-data-types" title="Permalink to this headline">#</a></h3>
+<p>In Python, variables are assigned values using the equal sign (“=”). Here are a few different kinds of variables. You can copy and paste the code below into your own notebook if you like. There are different types of variables, and in the box below I’ve set up four variables for four different data types.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MyInt</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#an integer</span>
@@ -575,7 +575,7 @@ True
 </section>
 <section id="checking-type">
 <h3>Checking Type<a class="headerlink" href="#checking-type" title="Permalink to this headline">#</a></h3>
-<p>Notice that the variables are different types: an integer, or number with no decimal; a floating point number, which has a decimal; a string, which is characters; and a boolean variable. We can check the type of variable using the <em>type</em> function.</p>
+<p>Notice that the variables are different types: 1) an integer, or number with no decimal; 2) a floating point number, which has a decimal; 2) a string, which is alphabeting characters; and 4) a boolean variable. Notice that in Python, variables of different types are set up the same way (using =). This means that it’s sometimes necessary to check the type of a variable, which can be done using the <em>type</em> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MyInt</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#an int</span>
@@ -619,8 +619,9 @@ True
 </div>
 </div>
 </div>
-<p>That’s just an example. Since we will be focusing on data analysis, we’ll focus on some basic mathematical operations here.  <a class="reference external" href="https://www.tutorialspoint.com/python/python_operators.htm">Here</a> is a link to a more comprehensive list of operators in Python.</p>
-<p>You might be asking yourself: why are there seperate integers and floating point numbers? Why not just represent all numbers as numbers? That’s actually a good question, and there is a good answer that requires getting into how computers encode numbers and many other things that honestly, I don’t know that much about. There are situations in which using an int instead of a float can cause problems, and vice versa. In analyzing data for psychology research, it’s usually OK to just use floating point numbers instead of ints though. This issue is one that you should be aware of, especially if you encounter a situation where the distinction is important - which could happen if you get enough experience analyzing data.</p>
+<p>Notice that when the numbers (floating point numbers in this case) are added, the result is what you’d expect” 1 + 2 = 3. However, when the “numbers” are stored as string variables, the + operator cannot do addition, but instead does string concatenation: the strings are linked together to form a single string, sometimes referred to as “string addition”</p>
+<p><a class="reference external" href="https://www.tutorialspoint.com/python/python_operators.htm">Here</a> is a link to a more comprehensive list of operators in Python.</p>
+<p>You might be asking yourself: why are there seperate integers and floating point numbers? Why not just represent all numbers as numbers? That’s actually a good question, and there is a good answer that requires getting into how computers encode numbers and many other things that honestly, I don’t know that much about. There are situations in which using an int instead of a float can cause problems, and vice versa. In analyzing data for psychology research, it’s usually OK to just use floating point numbers instead of ints. This issue is one that you should be aware of, especially if you encounter a situation where the distinction is important - which could happen if you get enough experience analyzing data.</p>
 </section>
 <section id="updating-and-changing-values">
 <h3>Updating and changing values<a class="headerlink" href="#updating-and-changing-values" title="Permalink to this headline">#</a></h3>
@@ -628,16 +629,23 @@ True
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1">#assigns x1 to the float 1.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x1 =  &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
 <span class="n">x2</span> <span class="o">=</span> <span class="n">x1</span> <span class="c1">#assins x2 to be equal to x1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x2 = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
 <span class="n">x1</span> <span class="o">+=</span> <span class="n">x1</span> <span class="c1">#this line updates x1 by adding x1 to itself. plus-equal += adds a variable to itself. Works with -= and *= too.</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="c1">#Can you figure out why these print statements have the output they do?</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x2</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">After update&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x1 =  &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span><span class="c1">#Can you figure out why these print statements have the output they do?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x2 = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
-1.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x1 =  1.0
+x2 = 1.0
+
+After update
+x1 =  2.0
+x2 = 1.0
 </pre></div>
 </div>
 </div>
@@ -718,13 +726,9 @@ Division results:
 </div>
 </div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>“With Python 3, the float/int distinction isn’t as important as it used to be, but note that sometimes the difference has implcations for computation. Floating point numbers are usually safe, at least for most of what psychologists need.” - Napolean (what he would say if he was teaching a Python course for psychology students)</p>
-</div>
 <section id="modulo-a-cool-operator-you-may-not-be-familiar-with">
 <h3>Modulo: A cool operator you may not be familiar with<a class="headerlink" href="#modulo-a-cool-operator-you-may-not-be-familiar-with" title="Permalink to this headline">#</a></h3>
-<p>Finally, a few more useful basic operators: the modulo operator (%). This will return the remainder of a division, so 5%4 will return 1, 6%4 returns two, 7%4 returns 3, and 8%4 returns 0. . This is actually very useful for making sure that things are checked cyclically, e.g. that a computer monitor updates every 10 frames.</p>
+<p>And one more useful operator: the modulo operator (%). This will return the remainder of a division, so 5%4 will return 1, 6%4 returns two, 7%4 returns 3, and 8%4 returns 0. This is actually very useful for making sure that things are checked cyclically, e.g. that a computer monitor updates every 10 frames.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The modulo operator returns the remainder of a division,</span>
@@ -749,7 +753,7 @@ Division results:
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mf">2.0</span>
 
-<span class="c1">#had to convert bool to str</span>
+<span class="c1">#had to convert bool to str and store the result as a variable</span>
 <span class="n">equal</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="p">)</span> <span class="c1"># check if two things are equal ==</span>
 <span class="n">notequal</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="n">y</span><span class="p">)</span><span class="c1"># check if two things not equal !=</span>
 <span class="n">greater</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span><span class="c1"># greater than &gt;</span>
@@ -777,10 +781,10 @@ x &lt;= y: True
 </div>
 </div>
 </div>
-<p>Variables are incredibly important, and it will be worth your time to become familiar with variable types and how each works in Python. What has been presented here is a start, hopefully enough so you can follow the intructions at websites like <a class="reference external" href="https://www.tutorialspoint.com/python3/index.htm">Tutorialspoint</a> or the official <a class="reference external" href="https://www.python.org/doc/">Python documentation</a>.</p>
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<p>Variables and operators are incredibly important, and it will be worth your time to become familiar with these work in Python. What has been presented here is a start, hopefully enough so you can follow the intructions at websites like <a class="reference external" href="https://www.tutorialspoint.com/python3/index.htm">Tutorialspoint</a> or the official <a class="reference external" href="https://www.python.org/doc/">Python documentation</a>.</p>
 <p>The following exercises contain broken code. The comments will tell you what the output should be. Copy and run the code in your own Jupyter Notebook. Change it until it works! For these excercises, each cell is intended to “stand on it’s own”, so don’t worry about saving code from Exercise 2.1 for Excercise 2.2.</p>
 <section id="exercise-2-1">
 <h3>Exercise 2.1<a class="headerlink" href="#exercise-2-1" title="Permalink to this headline">#</a></h3>
@@ -804,8 +808,8 @@ x &lt;= y: True
 <h3>Exercise 2.2<a class="headerlink" href="#exercise-2-2" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This code should print &quot;The value of z is equal to 7&quot;</span>
-<span class="c1">#Change the code so that it will print out the product of x and y no matter what their values are.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This code should print something like &quot;The value of z is equal to 7&quot;</span>
+<span class="c1">#Change the code so that it will print out the sum of x and y no matter what their values are.</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
@@ -826,10 +830,10 @@ x &lt;= y: True
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Help Ms. Frizzle figure out how many children she lost when the Magic School Bus crashed.</span>
 <span class="c1">#She knows how many children she had on the bus at first. </span>
-<span class="c1">#She does not know how many body bags were returned, but she knows each bag was full, with the exact number of bodies it could hold, no more no less.</span>
-<span class="c1">#Each bag could only hold 6 bodies.</span>
+<span class="c1">#She does not know how many body bags were returned</span>
+<span class="c1">#But she knows each bag was full, with the exact number of bodies it could hold, no more no less.</span>
 <span class="c1">#Are there any missing children? The bags can&#39;t be opened.</span>
-<span class="c1">#Replace exactly one character in the code below to find out if Ms. Frizzle should consider looking for missing kids...</span>
+<span class="c1">#Replace exactly one character in the code below to find out how many missing kids Ms. Frizzle might need to find...</span>
 
 <span class="n">NumberAtStart</span> <span class="o">=</span> <span class="mi">80</span> <span class="c1">#There were 80 children on the Magic School Bus. Now they are missing</span>
 <span class="n">FullBagsReturned</span> <span class="o">=</span> <span class="nb">int</span><span class="p">()</span> <span class="c1">#unknown!!!</span>

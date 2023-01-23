@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro_new.html">
-                    Introduction
+                    Preface
                 </a>
             </li>
         </ul>
@@ -378,6 +378,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-variable-names-in-lists">
+   Using Variable Names in Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dictionaries">
    Dictionaries
   </a>
@@ -445,6 +450,21 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#exercise-3-2">
      Exercise 3.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-3">
+     Exercise 3.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-4">
+     Exercise 3.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-5">
+     Exercise 3.5
     </a>
    </li>
   </ul>
@@ -486,6 +506,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-variable-names-in-lists">
+   Using Variable Names in Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dictionaries">
    Dictionaries
   </a>
@@ -555,6 +580,21 @@ title="Print to PDF"
      Exercise 3.2
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-3">
+     Exercise 3.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-4">
+     Exercise 3.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-5">
+     Exercise 3.5
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -569,10 +609,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-3-lists-dicts-and-loops">
 <h1>Chapter 3: Lists, Dicts, and Loops<a class="headerlink" href="#chapter-3-lists-dicts-and-loops" title="Permalink to this headline">#</a></h1>
-<p>Data sets have more than one value. As such, it’s quite handy that Python has the ability to store sequences of values. In this chapter, I’ll introduce <em>lists</em>, <em>dictionaries</em>, and <em>tuples</em>, all of which are different kinds of sequences.</p>
+<p>In psychology, data sets have more than one value. As such, it’s quite handy that Python has the ability to store sequences of values. In this chapter, I’ll introduce <em>lists</em>, <em>dictionaries</em>, and <em>tuples</em>, all of which are different kinds of sequences. These are referred to as <em>data structures</em> in Python, and I’m focusing on these three because they are incredibly useful, and as such incredibly common.</p>
 <section id="lists">
 <h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h2>
-<p>A <em>list</em> is a pretty basic data structure in Python. It’s essentially a sequence of values contained in square brackets. While not the-be-all-end-all of data structures in Python, lists are incredibly useful. Understanding lists is not optional for Python programming. Below is an example list.</p>
+<p>A <em>list</em> is a pretty basic data structure in Python. It’s essentially a sequence of values contained in square brackets. While not the-be-all-end-all of data structures in Python, lists are incredibly useful. Understanding lists is not optional for Python programming. Below is an example list. It will be used for the next few examples, so go ahead and copy it into your own Jupyter Notebook so you’ll have it ready for later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Copy this code into your own Jupyter Notebook</span>
@@ -589,18 +629,21 @@ title="Print to PDF"
 </div>
 <section id="appending-to-a-list">
 <h3>Appending to a List<a class="headerlink" href="#appending-to-a-list" title="Permalink to this headline">#</a></h3>
-<p>Notice that the values in the list are all floating point numbers, but that’s simply because we’ll be working more with floating point numbers in future excercises. In Python, lists can contain of any sort of values though. Lists can even contain other lists.</p>
-<p>This list is a bit small so we can <em>append</em> a new value to it using the code below, which uses the .append() method. I’ll have more to say about “methods” later. For now, just look at the syntax carefully - adding values to lists is common enough that you’ll want to know how to do this!</p>
+<p>Notice that the values in the list are all floating point numbers, but that’s simply because we’ll be working more with floating point numbers in future excercises. In Python, lists can contain of any sort of values though. Lists can even contain other lists. We’ll see examples of this kind of thing in subsequenct chapters.</p>
+<p>Our current list is a bit small, so we can <em>append</em> a new value to it using the code below, which uses the .append() method. I’ll have more to say about “methods” later. For now, just look at the syntax carefully - adding values to lists is common enough that you’ll want to know how to do this!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Copy this code into the same Jupyter Notebook you started already.</span>
+<span class="n">MyNumberList</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">MyNumberList</span><span class="p">)</span>
 <span class="n">MyNumberList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">4.0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">MyNumberList</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.0, 2.0, 3.0, 4.0]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.0, 2.0, 3.0]
+[1.0, 2.0, 3.0, 4.0]
 </pre></div>
 </div>
 </div>
@@ -634,15 +677,45 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>There is a lot more that lists are good for, and we will definitely see them again in this book. Here’s a <a class="reference external" href="https://www.tutorialspoint.com/python3/python_lists.htm">link</a> to a more comprehensive resource that I like for some reason.</p>
 </section>
+</section>
+<section id="using-variable-names-in-lists">
+<h2>Using Variable Names in Lists<a class="headerlink" href="#using-variable-names-in-lists" title="Permalink to this headline">#</a></h2>
+<p>Sometimes, you may want to create a list and use the names of the variables when typing out the list. This will work, but what happens if one of the values is updated after the list is created?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value1</span> <span class="o">=</span> <span class="mf">1.0</span><span class="c1">#Create 3 floats and put them in a list</span>
+<span class="n">value2</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">value3</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">ValueList</span> <span class="o">=</span> <span class="p">[</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">value3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value1 is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thee ValueList is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ValueList</span><span class="p">))</span>
+
+<span class="n">value1</span> <span class="o">=</span> <span class="mf">100000.0</span><span class="c1">#update the value of one of the floats</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value1 is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value1</span><span class="p">))</span><span class="c1">#print updated value</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thee ValueList is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ValueList</span><span class="p">))</span><span class="c1">#print list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>value1 is 1.0
+Thee ValueList is [1.0, 2.0, 3.0]
+value1 is 100000.0
+Thee ValueList is [1.0, 2.0, 3.0]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, the list did not update when the variable did.</p>
+<p>There is a lot more that lists are good for, and we will definitely see them again in this book. Here’s a <a class="reference external" href="https://www.tutorialspoint.com/python3/python_lists.htm">link</a> to a more comprehensive resource that I like for some reason.</p>
 </section>
 <section id="dictionaries">
 <h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">#</a></h2>
-<p>Dictionaries are data structures that come in key:value pairs. One way to think of dictionaries is a lists for which the key has to be specified. Keys are not automatically generated based on which values are further to the left or the right, but have to be specified when the dictionary is created or updated. For data analysis, it’s often helpful to have the key for a value be something memorable, like a word. In Python, this would mean we use a string variable. The value can be whatever data we want associated with the word.</p>
+<p>Dictionaries are data structures that come in key:value pairs. One way to think of dictionaries is a lists for which the key has to be specified. Keys are not automatically generated based on which values are further to the left or the right as in a list, but have to be specified when the dictionary is created or updated. For data analysis, it’s often helpful to have the key for a value be something memorable, like a word. In Python, this would mean we use a string variable. The value can be whatever data we want associated with the word.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MyDictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="s2">&quot;DAV&quot;</span><span class="p">,</span> <span class="s2">&quot;FavNumb&quot;</span><span class="p">:</span> <span class="mf">42.0</span><span class="p">,</span> <span class="s2">&quot;Single&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MyDictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="s2">&quot;DAV&quot;</span><span class="p">,</span> <span class="s2">&quot;FavNumb&quot;</span><span class="p">:</span> <span class="mf">42.0</span><span class="p">,</span> <span class="s2">&quot;Incarcerated&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">MyDictionary</span><span class="p">)</span><span class="c1"># will print the entire dictionary, keys and pairs</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">MyDictionary</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">])</span><span class="c1">#will print value associated with key &quot;Name&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">MyDictionary</span><span class="p">[</span><span class="s2">&quot;FavNumb&quot;</span><span class="p">])</span><span class="c1">#will print value associated with key &quot;FavNumb&quot;</span>
@@ -650,7 +723,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Name&#39;: &#39;DAV&#39;, &#39;FavNumb&#39;: 42.0, &#39;Single&#39;: False}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Name&#39;: &#39;DAV&#39;, &#39;FavNumb&#39;: 42.0, &#39;Incarcerated&#39;: False}
 DAV
 42.0
 </pre></div>
@@ -753,7 +826,7 @@ After loop: [2.0, 3.0, 4.0, 5.0]
 <span class="n">NumberTotal</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="c1"># Need variable to store the results of the addition</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">MyNumberList</span><span class="p">:</span>
-    <span class="n">NumberTotal</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="n">NumberTotal</span> <span class="o">+=</span> <span class="n">i</span><span class="c1">#adds 1 to the value of i</span>
     
 <span class="nb">print</span><span class="p">(</span><span class="n">NumberTotal</span><span class="p">)</span>
 </pre></div>
@@ -772,10 +845,11 @@ After loop: [2.0, 3.0, 4.0, 5.0]
 <p>Let’s do some exercises.</p>
 <section id="exercise-3-1">
 <h3>Exercise 3.1<a class="headerlink" href="#exercise-3-1" title="Permalink to this headline">#</a></h3>
+<p>Just a little puzzle. Hopefully not too difficult.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The rules for slicing lists and strings are basically the same.</span>
-<span class="c1">#Print the 3rd, 16th, 18th, 25th, 50th, 63rd, 21st, and 80th in that order</span>
+<span class="c1">#Print the 3rd, 16th, 18th, 25th, 50th, 63rd, 21st, and 80th characters in that order</span>
 <span class="c1">#What is the secret message?</span>
 
 <span class="n">MyString</span> <span class="o">=</span> <span class="s2">&quot;IJGUP&amp;Vd sax I opoasmkxcd oiu   Piu oiooisn  kkjsas j nx aswzeyxDCV BHFRUY</span><span class="si">%G</span><span class="s2">o7m8&quot;</span>
@@ -786,7 +860,68 @@ After loop: [2.0, 3.0, 4.0, 5.0]
 </section>
 <section id="exercise-3-2">
 <h3>Exercise 3.2<a class="headerlink" href="#exercise-3-2" title="Permalink to this headline">#</a></h3>
-<p>(more exercises to come)</p>
+<p>The code below is from an example from the text. Change the code below so that the second time the ValueList prints,  the updated value for value1 is included.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value1</span> <span class="o">=</span> <span class="mf">1.0</span><span class="c1">#Create 3 floats and put them in a list</span>
+<span class="n">value2</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="n">value3</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">ValueList</span> <span class="o">=</span> <span class="p">[</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">value3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value1 is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thee ValueList is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ValueList</span><span class="p">))</span>
+
+<span class="n">value1</span> <span class="o">=</span> <span class="mf">100000.0</span><span class="c1">#update the value of one of the floats</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value1 is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value1</span><span class="p">))</span><span class="c1">#print updated value</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Thee ValueList is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">ValueList</span><span class="p">))</span><span class="c1">#print list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>value1 is 1.0
+Thee ValueList is [1.0, 2.0, 3.0]
+value1 is 100000.0
+Thee ValueList is [1.0, 2.0, 3.0]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-3-3">
+<h3>Exercise 3.3<a class="headerlink" href="#exercise-3-3" title="Permalink to this headline">#</a></h3>
+<p>Sometimes lists need to be combined! For example, you may have data from two different sessions, and have reason to combine the data into a sigle list. There a a few ways to accomplish this task, and everything you need is in the first three chapters of this book! See if you can figure it out before turning to google.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">4.0</span><span class="p">]</span>
+<span class="n">moreNumbers</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">4.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-3-4">
+<h3>Exercise 3.4<a class="headerlink" href="#exercise-3-4" title="Permalink to this headline">#</a></h3>
+<p>Write code to get the sum of the lists in the dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DictLists</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;List1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">32.1</span><span class="p">,</span><span class="mf">435.</span><span class="p">,</span><span class="mf">123.</span><span class="p">,</span><span class="mf">441.008</span><span class="p">],</span><span class="s2">&quot;List2&quot;</span><span class="p">:[</span><span class="mf">89348.990</span><span class="p">,</span><span class="mf">842.0</span><span class="p">,</span><span class="mf">12.8123</span><span class="p">,</span><span class="mf">1423.0</span><span class="p">,</span><span class="mf">0.114</span><span class="p">]}</span>
+
+    
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-3-5">
+<h3>Exercise 3.5<a class="headerlink" href="#exercise-3-5" title="Permalink to this headline">#</a></h3>
+<p>Write code to create a new list that contains the squares of the values in the list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">squareMe</span> <span class="o">=</span> <span class="p">[</span><span class="mf">32.1</span><span class="p">,</span><span class="mf">435.</span><span class="p">,</span><span class="mf">123.</span><span class="p">,</span><span class="mf">441.008</span><span class="p">,</span><span class="mf">89348.990</span><span class="p">,</span><span class="mf">842.0</span><span class="p">,</span><span class="mf">12.8123</span><span class="p">,</span><span class="mf">1423.0</span><span class="p">,</span><span class="mf">0.114</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
