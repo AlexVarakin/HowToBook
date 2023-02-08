@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro_new.html">
-                    Introduction?
+                    Preface
                 </a>
             </li>
         </ul>
@@ -366,6 +366,15 @@ title="Print to PDF"
 <h1>Chapter 5: Flow Control and Conditional Statements<a class="headerlink" href="#chapter-5-flow-control-and-conditional-statements" title="Permalink to this headline">#</a></h1>
 <p>Topics to cover: if, elif, else (and pass, etc.)</p>
 <p>Examples: filter data to calculate separate means for diff groups; get rid of extreme values</p>
+<p>Often, we want to perform some action only if some condition is satisfied. For example, we might want to examine only a subset of observations in a data set. In Python (and other programming languages), we can use <em>if</em>, <em>elif</em> and <em>else</em> statments in combination with comparison operators (see chapter 2) to select only the data we want to analyze. Recall, comparison operators (==,!=, &gt;,&lt;,&gt;=,&lt;=) compare the value of a variable to another value and return a boolean (true or false).</p>
+<p><em>If</em> statements specify a condition, and what to do if that condition is true. What a program does after an <em>if</em> statement depends on what comes after. An <em>elif</em> statement will run after an <em>if</em> statment only if the condition is false, and another condition is met. An <em>else</em> statement will run if a previous <em>if</em> or <em>elif</em> statement is false, not matter what. Notice that both <em>elif</em> and <em>else</em> statements only run if the result of a previous statement is false. The difference is that <em>elif</em> statements require another condition to be true before anything happens, whereas an <em>else</em> statement does not.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theAnswer</span> <span class="o">=</span> <span class="mf">42.0</span> 
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

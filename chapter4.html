@@ -372,6 +372,23 @@ title="Print to PDF"
    Built-In Modules
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4-1">
+     Exercise 4.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4-2">
+     Exercise 4.2
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -401,6 +418,23 @@ title="Print to PDF"
    Built-In Modules
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4-1">
+     Exercise 4.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4-2">
+     Exercise 4.2
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -418,7 +452,7 @@ title="Print to PDF"
 <p>Sometimes it’s easier to write your own functions than to search for the module or library that has whatever functionality you want (sometimes). But Python has some built in modules for things like ranomization, math, and statistics. Accessing them requires importing the modules, which we haven’t discussed yet, but we’ll go over some of the things that can these modules can do.</p>
 <section id="user-defined-function-for-the-mean">
 <h2>User-defined Function for The Mean<a class="headerlink" href="#user-defined-function-for-the-mean" title="Permalink to this headline">#</a></h2>
-<p>I’m betting you know what a <em>mean</em> is: it’s also commonly called an <em>average</em>. The mean is nice because it is a single number that captures the location of a set of numbers, and the mean can be precisely defined.</p>
+<p>I’m betting you know what a <em>mean</em> is: it’s also commonly called an <em>average</em>. The mean is nice because it is a single number that captures the location of a set of numbers and it be precisely defined algebraically.</p>
 <p>If you have a variable x with a total of n observations, finding the mean involves first adding up all of the values of x, and then dividing the result of the summation by the number of things that were summed. That’s quite a mouthful to say, but the equation expresses the idea much more succinctly.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -482,28 +516,15 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>If anyone wants to accuse me now of wasting time go ahead. But remember that part of the goal with this book is for you to learn Python, which requires doing exercises in Python! So, in asking you to follow along to write a function that doesn’t need to be written, I’m really just giving you practice. So now, try to write a function that calculates a sample standard deviation. Do it without peaking ahead to the next section!</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SqrtOfFour</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span> <span class="mf">.5</span> <span class="c1">#Hint for the challenge!</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">SqrtOfFour</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
-</pre></div>
-</div>
-</div>
-</div>
+<p>If anyone wants to accuse me now of wasting time go ahead. But remember that part of the goal with this book is for you to learn Python, which requires doing exercises in Python! So, think of this as practice.</p>
 </section>
 <section id="built-in-modules">
 <h2>Built-In Modules<a class="headerlink" href="#built-in-modules" title="Permalink to this headline">#</a></h2>
-<p>Hopefully you successfully wrote a function for calculating a sample standard deviation. Now that you’ve done it the hard way, I’ll tell you about adding functions to Python by importing built-in modules (installing and importing libraries will be covered later). That means you’ll never have to write a function to calculate the standard deviation again (or for the first time).</p>
+<p>Now that you’ve calculated a mean the hard way, I’ll tell you about adding functions to Python by importing built-in modules (installing and importing libraries will be covered later). That means you’ll never have to write a function to calculate the mean (or for the first time if you weren’t following along).</p>
 <p>Python has numerous built in modules, or libraries, that are helpful for analyzing data. There are many other kinds of built in modules, but we’ll focus on the ones for numeric and mathematical computation - and even then, just a subset of the modules. The <a class="reference external" href="https://docs.python.org/3/library/numeric.html">documentation</a> is good, and there are plenty of pretty good tutorials like <a class="reference external" href="https://www.w3schools.com/python/module_statistics.asp">this one</a>. So, as usual, what’s presented here isn’t exhaustive, but more illusrative. I’ll import the statistics module, and calculate the mean and sample standard deviation of some fake data. The general syntax for importing other built-in modules and working with their functions is the same. To import, include <strong>import <em>ModuleName</em></strong> at the top of the script, and to use a function from the library save the results of <em>ModuleName</em>.<em>FunctionName()</em> to a variable, and then do whatever you want with the variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span> <span class="c1">#this line will imort the entire statistics library</span>
 
 <span class="n">MyFakeData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span><span class="mf">2.</span><span class="p">,</span><span class="mf">3.</span><span class="p">]</span>
 
@@ -522,9 +543,43 @@ EasyStDev:1.0
 </div>
 </div>
 </div>
-<p>Let’s do some exercises, that perhaps require you to answer questions I haven’t answered in this chapter?</p>
-<p>1 What does Python have available - in base Python! - to add up a list of numbers?</p>
-<p>give some broken code with import math and import random, maybe filtering out bad data? - dog example,</p>
+<p>Let’s do some exercises, that perhaps require you to access information I haven’t answered in this chapter?</p>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<section id="exercise-4-1">
+<h3>Exercise 4.1<a class="headerlink" href="#exercise-4-1" title="Permalink to this headline">#</a></h3>
+<p>In this chapter, I showed you how to write a function for adding up a list of numbers. Python already has a function built in that will do that. Use any of the resources presented in this book (or that you can find yourself) to find the function, and use it to add up the numbers in the list below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AddMeUpPlz</span> <span class="o">=</span> <span class="p">[</span><span class="mf">.04</span><span class="p">,</span><span class="mf">.06</span><span class="p">,</span><span class="mf">.09</span><span class="p">,</span><span class="mf">.11</span><span class="p">,</span><span class="mf">.00091</span><span class="p">,</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">.98</span><span class="p">,</span><span class="mf">.00</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-4-2">
+<h3>Exercise 4.2<a class="headerlink" href="#exercise-4-2" title="Permalink to this headline">#</a></h3>
+<p>Kids are always fighting to get to the head of the line, so teachers need to have a system in place to decide the order in which students line up. One way to do it is randomly sort the students every day. Luckily, Python can help randomly shuffle sequences. Use any of the resources presented in this book (or that you can find yourself) to find the function, and randomly sort the class roster.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import #HINT: probably easiest to search for a library to import than to try to figure out shuffling algorithms</span>
+
+<span class="n">classRoster</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Frankie&quot;</span><span class="p">,</span><span class="s2">&quot;Charlotta&quot;</span><span class="p">,</span><span class="s2">&quot;Antristenese&quot;</span><span class="p">,</span><span class="s2">&quot;Shower&quot;</span><span class="p">,</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="s2">&quot;Judy&quot;</span><span class="p">,</span><span class="s2">&quot;Udoxia&quot;</span><span class="p">,</span><span class="s2">&quot;Julio&quot;</span><span class="p">,</span><span class="s2">&quot;Butters&quot;</span><span class="p">]</span>
+
+<span class="c1">#code for shuffling the list goes here</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">classRoster</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Frankie&#39;, &#39;Charlotta&#39;, &#39;Antristenese&#39;, &#39;Shower&#39;, &#39;Bob&#39;, &#39;Judy&#39;, &#39;Udoxia&#39;, &#39;Julio&#39;, &#39;Butters&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
