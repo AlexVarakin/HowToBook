@@ -338,12 +338,89 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-elif-else-and-is">
+   <em>
+    if
+   </em>
+   ,
+   <em>
+    elif
+   </em>
+   ,
+   <em>
+    else
+   </em>
+   and
+   <em>
+    is
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-selecting-one-type-of-data">
+     Example 1: Selecting one type of data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-selecting-two-types-data">
+     Example 2: Selecting two types data.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-getting-rid-of-extreme-values">
+     Example 3: Getting rid of extreme values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-selecting-only-extreme-values">
+     Example 4: Selecting only extreme values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-combining-previous-examples-into-one-example">
+     Example 5: Combining previous examples into one example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     Exercise 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -355,6 +432,72 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-elif-else-and-is">
+   <em>
+    if
+   </em>
+   ,
+   <em>
+    elif
+   </em>
+   ,
+   <em>
+    else
+   </em>
+   and
+   <em>
+    is
+   </em>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-selecting-one-type-of-data">
+     Example 1: Selecting one type of data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-selecting-two-types-data">
+     Example 2: Selecting two types data.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-getting-rid-of-extreme-values">
+     Example 3: Getting rid of extreme values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-selecting-only-extreme-values">
+     Example 4: Selecting only extreme values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-combining-previous-examples-into-one-example">
+     Example 5: Combining previous examples into one example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     Exercise 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -364,17 +507,176 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="chapter-5-flow-control-and-conditional-statements">
 <h1>Chapter 5: Flow Control and Conditional Statements<a class="headerlink" href="#chapter-5-flow-control-and-conditional-statements" title="Permalink to this headline">#</a></h1>
-<p>Topics to cover: if, elif, else (and pass, etc.)</p>
-<p>Examples: filter data to calculate separate means for diff groups; get rid of extreme values</p>
-<p>Often, we want to perform some action only if some condition is satisfied. For example, we might want to examine only a subset of observations in a data set. In Python (and other programming languages), we can use <em>if</em>, <em>elif</em> and <em>else</em> statments in combination with comparison operators (see chapter 2) to select only the data we want to analyze. Recall, comparison operators (==,!=, &gt;,&lt;,&gt;=,&lt;=) compare the value of a variable to another value and return a boolean (true or false).</p>
-<p><em>If</em> statements specify a condition, and what to do if that condition is true. What a program does after an <em>if</em> statement depends on what comes after. An <em>elif</em> statement will run after an <em>if</em> statment only if the condition is false, and another condition is met. An <em>else</em> statement will run if a previous <em>if</em> or <em>elif</em> statement is false, not matter what. Notice that both <em>elif</em> and <em>else</em> statements only run if the result of a previous statement is false. The difference is that <em>elif</em> statements require another condition to be true before anything happens, whereas an <em>else</em> statement does not.</p>
+<p>In the last chapter, you learned how to create user defined functions, a little about built in functions, and how to import built in modules to gain access to additional methods for doing some common calculations. In even earlier chapters, you learned about different data structures in Python (e.g. lists, dictionaries) and how to use <em>for</em> loops to perform calculations with them. These are useful concepts to master, but notice that in order to use functions, methods, and loops, you have to make sure that the data you want, and only the data you want, is processed. When working realistically sized data sets, it can be incredibly time consuming to organize and select the data you want. Python scripts can help.</p>
+<p>For example, we might want to examine only a subset of observations in a data set. In Python (and other programming languages), we can use <em>if</em>, <em>elif</em> and <em>else</em> statments in combination with comparison operators (see chapter 2) to select only the data we want to analyze. Recall, comparison operators (==,!=, &gt;,&lt;,&gt;=,&lt;=) compare the value of a variable to another value and return a boolean (true or false).</p>
+<p>As in previous chapters, the specific details of some of the exercises in this chapter are intended as learning exercises, but some may also be practically useful, should you encounter a similar situaion “in the wild”.</p>
+<section id="if-elif-else-and-is">
+<h2><em>if</em>, <em>elif</em>, <em>else</em> and <em>is</em><a class="headerlink" href="#if-elif-else-and-is" title="Permalink to this headline">#</a></h2>
+<p><em>If</em> statements specify a condition, and what to do if that condition is true. So, what a program does after an <em>if</em> statement depends on what comes after. An <em>elif</em> statement will run after an <em>if</em> statment only if the condition of the imediately preceding <em>if</em> or <em>elif</em> statement is false, and another condition. An <em>else</em> statement will run if a previous <em>if</em> or <em>elif</em> statement is false, not matter what. Notice that both <em>elif</em> and <em>else</em> statements only run if the result of a previous statement is false. The difference is that <em>elif</em> statements require another condition to be true before anything happens, whereas an <em>else</em> statement does not.</p>
+<p>Also notice that I snuck in some new Python keywords, <a class="reference external" href="https://www.w3schools.com/python/ref_keyword_is.asp">is</a>, <a class="reference external" href="https://www.w3schools.com/python/ref_keyword_and.asp">and</a>, and <a class="reference external" href="https://www.w3schools.com/python/ref_keyword_or.asp">or</a>.</p>
+<p>The <em>is</em> key word functions somewhat like the comparison operator ==. For our purposes, the important thing to know is that the <em>is</em> keyword checks to see if two variables point to the same thing in memory, whereas the == operator checks to see if the value of two variables is the same. The <em>and</em> and <em>or</em> keywords are logical operators.</p>
+<p>The examples below should be copied and pasted into your own Jupyter notebook because they build on each other. So, if you haven’t already, go ahead and open a new notebook.</p>
+<section id="example-1-selecting-one-type-of-data">
+<h3>Example 1: Selecting one type of data<a class="headerlink" href="#example-1-selecting-one-type-of-data" title="Permalink to this headline">#</a></h3>
+<p>Let’s pretend you have some data stored in a list, and the data is of different types. For illustrative purposes, we’ll just assume the data consists of floating point numbers and strings (i.e. text). What we want to do is go through the list and compute the mean (or whatever else we might want to do) for the valid numbers. The code below will do that. Notice that there is only one <em>if</em> statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">theAnswer</span> <span class="o">=</span> <span class="mf">42.0</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span> <span class="c1">#import the statistics library</span>
+
+<span class="n">rawData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="s2">&quot;3.0&quot;</span><span class="p">,</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span><span class="s2">&quot;Bob&quot;</span><span class="p">]</span><span class="c1">#list with floating point numbers and strings</span>
+
+<span class="c1">#function for filtering data</span>
+<span class="k">def</span> <span class="nf">getFloats</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">justFloats</span> <span class="o">=</span> <span class="p">[]</span><span class="c1">#initialize empty list to put the floats into</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">float</span><span class="p">:</span> <span class="c1">#if statement, with the *is* keyword snuck in for good measure</span>
+            <span class="n">justFloats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">justFloats</span> <span class="c1">#always need a return statement! In this case, it&#39;s a new list</span>
+
+<span class="n">goodData</span> <span class="o">=</span> <span class="n">getFloats</span><span class="p">(</span><span class="n">rawData</span><span class="p">)</span><span class="c1">#use function to create list of juist floats</span>
+
+<span class="n">meanGoodData</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">goodData</span><span class="p">)</span><span class="c1">#calculate the mean</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">meanGoodData</span><span class="p">))</span><span class="c1">#print the mean</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean is 1.5
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="example-2-selecting-two-types-data">
+<h3>Example 2: Selecting two types data.<a class="headerlink" href="#example-2-selecting-two-types-data" title="Permalink to this headline">#</a></h3>
+<p>In the previous exercise, the function just checked the data type of each element and made a new list for the floats. What if we also wanted a list of the strings?  The code below does that. Notice the differences in the <em>return</em> statements of example 1 above and example 2 below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rawData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="s2">&quot;3.0&quot;</span><span class="p">,</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span><span class="s2">&quot;Bob&quot;</span><span class="p">]</span><span class="c1">#list with floating point numbers and strings</span>
+
+<span class="k">def</span> <span class="nf">sepFloatsStrings</span><span class="p">(</span><span class="n">data</span><span class="p">):</span><span class="c1">#separates floats and strings</span>
+    <span class="n">justFloats</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">justStrings</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">float</span><span class="p">:</span>
+            <span class="n">justFloats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span><span class="c1">#use elif because</span>
+            <span class="n">justStrings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">justFloats</span><span class="p">,</span> <span class="n">justStrings</span><span class="c1">#this returns two lists. The two lists are stored in a tuple.</span>
+
+<span class="n">FloatString</span> <span class="o">=</span> <span class="n">sepFloatsStrings</span><span class="p">(</span><span class="n">rawData</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">FloatString</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>([1.0, 2.0], [&#39;3.0&#39;, &#39;4.0&#39;, &#39;Bob&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice the output has two lists (one of floats and one of strings) contained within parentheses. This happened because our function returned two lists. The result is that our two outputs are stored in a data structure called a <em>tuple</em>. For our purposes here, you can think of a tuple as a list that can’t be changed or updated. Read more about tuples <a class="reference external" href="https://www.w3schools.com/python/python_tuples.asp">here</a> if you want. Items in tuples are indexed and can be accessed just like items in a list or individual characters in a string. (I should point out here that I did this just for illustration. It’s typically easier to follow code when functions return one thing, and not two, so think hard about whether it’s better to create one or two functions.</p>
+</section>
+<section id="example-3-getting-rid-of-extreme-values">
+<h3>Example 3: Getting rid of extreme values<a class="headerlink" href="#example-3-getting-rid-of-extreme-values" title="Permalink to this headline">#</a></h3>
+<p>The preceding examples selected data based on the type of variable. Once we have the correct kind of data, sometimes we want further select values based on the value. For example, in reaction time experiments, it’s common to eliminate extreme values or outliers. There are several methods for determining what an outlier is, and which method to use is highly dependent on context. Perhaps the simplest method is to specify the lowest and highest values. This method is quite simple, but is useful in cases where extreme values can be identified <em>a priori</em>, as is often the case in reaction time experiments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extremeData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">2.3</span><span class="p">,</span><span class="mf">1.4</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.6</span><span class="p">,</span><span class="mf">2.9</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">4.3</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">2.6</span><span class="p">,</span><span class="mf">7.8</span><span class="p">,]</span>
+
+<span class="k">def</span> <span class="nf">trimData</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">lb</span><span class="p">,</span><span class="n">ub</span><span class="p">):</span>
+    <span class="n">trimmedData</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">lb</span> <span class="o">&lt;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ub</span><span class="p">:</span>
+            <span class="n">trimmedData</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">trimmedData</span>
+
+<span class="n">nonExtremeData</span> <span class="o">=</span> <span class="n">trimData</span><span class="p">(</span><span class="n">extremeData</span><span class="p">,</span><span class="mf">.2</span><span class="p">,</span><span class="mf">3.0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nonExtremeData</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.3, 1.4, 1.2, 1.5, 1.6, 2.9, 1.2, 1.7, 0.8, 2.6]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that each of code inside each functions in the examples above follow the same general pattern: set up variables to store the value(s) that need to be returned, use for loop to pull out the required values, and a return statement that returns the variables that were declared at the beginning of the function.</p>
+</section>
+<section id="example-4-selecting-only-extreme-values">
+<h3>Example 4: Selecting only extreme values<a class="headerlink" href="#example-4-selecting-only-extreme-values" title="Permalink to this headline">#</a></h3>
+<p>Anytime you’re analyzing data and discarding values, it’s necessary to keep track of how much data you’re discarding. In some cases, it might actually be interesting to examine just the extreme values. The example below counts the number of values rejected for being either too low or too high.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">extremeData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">2.3</span><span class="p">,</span><span class="mf">1.4</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.6</span><span class="p">,</span><span class="mf">2.9</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">4.3</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">2.6</span><span class="p">,</span><span class="mf">7.8</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">countRejects</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">lb</span><span class="p">,</span><span class="n">ub</span><span class="p">):</span>
+    <span class="n">tooLow</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">tooHigh</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">lb</span><span class="p">:</span>
+            <span class="n">tooLow</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">ub</span><span class="p">:</span>
+            <span class="n">tooHigh</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">tooLow</span><span class="p">,</span> <span class="n">tooHigh</span>
+
+<span class="n">rejectData</span> <span class="o">=</span> <span class="n">countRejects</span><span class="p">(</span><span class="n">extremeData</span><span class="p">,</span><span class="mf">.2</span><span class="p">,</span><span class="mf">3.0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rejectData</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-5-combining-previous-examples-into-one-example">
+<h3>Example 5: Combining previous examples into one example<a class="headerlink" href="#example-5-combining-previous-examples-into-one-example" title="Permalink to this headline">#</a></h3>
+<p>Remember that the point of writing user-defined functions is to make it easy to reuse the code. If you’ve been following along and executing each of the examples in the same Jupyter notebook (and not deleting cells as you go), then this example will work. It uses some of the functions to filter data and then calculate the mean and standard deviation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">messyData</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">2.3</span><span class="p">,</span><span class="mf">1.4</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">1.6</span><span class="p">,</span><span class="s2">&quot;Tata&quot;</span><span class="p">,</span><span class="mf">2.9</span><span class="p">,</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">4.3</span><span class="p">,</span><span class="mf">1.2</span><span class="p">,</span><span class="mf">1.7</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">2.6</span><span class="p">,</span><span class="mf">7.8</span><span class="p">,</span><span class="s2">&quot;3.0&quot;</span><span class="p">,</span><span class="mf">9.7</span><span class="p">,</span><span class="s2">&quot;4.0&quot;</span><span class="p">,</span><span class="s2">&quot;Bob&quot;</span><span class="p">]</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">ub</span> <span class="o">=</span> <span class="mf">3.0</span>
+
+<span class="n">justFloats</span> <span class="o">=</span> <span class="n">getFloats</span><span class="p">(</span><span class="n">messyData</span><span class="p">)</span>
+<span class="n">noOutliers</span> <span class="o">=</span> <span class="n">trimData</span><span class="p">(</span><span class="n">justFloats</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span> <span class="n">ub</span><span class="p">)</span>
+<span class="n">numRejectData</span> <span class="o">=</span> <span class="n">countRejects</span><span class="p">(</span><span class="n">justFloats</span><span class="p">,</span> <span class="n">lb</span><span class="p">,</span> <span class="n">ub</span><span class="p">)</span>
+
+<span class="n">theMean</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">noOutliers</span><span class="p">)</span>
+<span class="n">theSD</span> <span class="o">=</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">noOutliers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">theMean</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The standard deviation is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">theSD</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">numRejectData</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; data points were rejected as too low&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">numRejectData</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot; data points were rejected as too high&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean is 1.72
+The standard deviation is 0.6713171133426189
+2 data points were rejected as too low
+4 data points were rejected as too high
+</pre></div>
+</div>
+</div>
+</div>
+<p>(Need to add an example separating data into two groups)</p>
+</section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h2>
+<section id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
